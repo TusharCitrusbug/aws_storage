@@ -136,7 +136,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATIC_ROOT = os.path.join(BASE_DIR,'apk','static')
 STATIC_ROOT = os.path.join(BASE_DIR,'media')
 StaticRootS3BotoStorage = lambda: S3Boto3Storage(location="test/static")
 MediaRootS3BotoStorage = lambda: S3Boto3Storage(location="test/media")
@@ -151,4 +151,4 @@ AWS_ACCESS_KEY_ID = config("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = config("AWS_SECRET_ACCESS_KEY")
 AWS_STORAGE_BUCKET_NAME = config("AWS_STORAGE_BUCKET_NAME")
 AWS_QUERYSTRING_AUTH = False
-AWS_DEFAULT_ACL = 'public-read'
+AWS_DEFAULT_ACL = 'public-read-write'
